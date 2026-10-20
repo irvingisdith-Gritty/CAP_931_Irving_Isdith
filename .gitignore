@@ -1,0 +1,24 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv/
+
+# Environment variables and API credentials
+.env
+.env.*
+!.env.example
+
+# Local secrets
+secrets.toml
+.streamlit/secrets.toml
+# Local backup files
+app_backup.py
+research_agent_backup.py
+# Development-only OpenAI test
+test_ai.py
