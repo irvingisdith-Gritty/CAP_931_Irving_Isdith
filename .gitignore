@@ -22,3 +22,21 @@ app_backup.py
 research_agent_backup.py
 # Development-only OpenAI test
 test_ai.py
+# Additional virtual environments
+.venv_broken/
+
+# Research Agent development backups
+research_agent_step95_backup.py
+research_agent_multipage_backup.py
+
+# Streamlit development backups
+app_before_document_upgrade.py
+app_before_multipage.py
+
+# Local testing documents
+test_product.pdf
+test_product.docx
+
+# Additional local credentials
+*.key
+*.pem

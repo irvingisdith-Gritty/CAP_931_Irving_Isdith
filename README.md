@@ -1,8 +1,8 @@
-# CAP 931 — AI Sales Assistant Agent Prototype
+# CAP 931 â€” AI Sales Assistant Agent Prototype
 
-**Project:** AI-Powered B2B Sales Intelligence Assistant  
-**Developer:** Irving Isdith  
-**Course:** Per Scholas — CAP 931
+**Project:** AI-Powered B2B Sales Intelligence Assistant
+**Developer:** Irving Isdith
+**Course:** Per Scholas â€” CAP 931
 
 ## 1. Project Overview
 
@@ -36,13 +36,16 @@ The application gathers website research, analyzes available competitor informat
 
 | File | Description |
 |---|---|
-| `app.py` | Main Streamlit application |
-| `research_agent.py` | Company website research |
+| `app.py` | Main Streamlit application and AI report generation |
+| `research_agent_multipage.py` | Secure multi-page company website research |
+| `research_agent.py` | Original company research implementation |
 | `competitor_agent.py` | Competitor website research |
-| `leadership_agent.py` | Leadership research |
+| `leadership_agent.py` | Leadership and decision-maker research |
+| `document_processor.py` | PDF, DOCX, and TXT document processing |
 | `test_groq.py` | Groq API connection testing |
-| `test_ai.py` | AI testing |
+| `test_ai.py` | Local AI testing script |
 | `pyproject.toml` | Project configuration and dependencies |
+| `uv.lock` | Locked Python dependencies |
 
 ## 5. How to Run the Application
 
@@ -98,3 +101,45 @@ The tested scenarios passed. Additional testing would be required before product
 ## 9. Conclusion
 
 The CAP 931 AI Sales Assistant demonstrates how Python, website research, prompt engineering, and large language models can be combined to support B2B sales research and decision-making.
+## 10. Enhanced Research Capabilities
+
+The upgraded Research Agent supports:
+
+- Multi-page HTTPS website research
+- Discovery of relevant company pages
+- Public-IP validation to reduce SSRF risks
+- HTTPS certificate verification
+- Redirect restrictions
+- Response-size limits
+- Structured extraction of website content
+
+The application uses `research_agent_multipage.py` for company research.
+
+These protections improve security but do not constitute a
+complete production security audit.
+
+## 11. Product Document Processing
+
+The application supports optional product documentation uploads:
+
+- PDF
+- DOCX
+- TXT
+
+The `document_processor.py` module extracts text from uploaded
+documents to support product analysis.
+
+Uploaded documents are treated as untrusted source material.
+Document-sourced product claims are not independently verified.
+
+## 12. Running with uv
+
+Install project dependencies:
+
+    uv sync
+
+Launch the Streamlit application:
+
+    uv run streamlit run app.py
+
+Configure the GROQ_API_KEY environment variable before launching.
