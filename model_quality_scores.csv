@@ -1,0 +1,3 @@
+﻿model,completeness,factual_accuracy,evidence_classification,sales_relevance,clarity,total
+openai/gpt-oss-20b,20,12,12,16,18,78
+openai/gpt-oss-120b,20,14,16,17,19,86
